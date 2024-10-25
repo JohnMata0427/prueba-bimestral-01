@@ -1,0 +1,7 @@
+{
+  "name": "prueba-bimestral-01",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular-standalone"
+}
