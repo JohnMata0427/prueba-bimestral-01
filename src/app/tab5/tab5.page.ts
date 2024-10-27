@@ -10,6 +10,7 @@ import {
   IonButton,
   IonItem,
   IonLabel,
+  IonItemDivider
 } from '@ionic/angular/standalone';
 import { ReactiveFormsModule } from '@angular/forms';
 
@@ -26,27 +27,36 @@ import { ReactiveFormsModule } from '@angular/forms';
     ReactiveFormsModule,
     IonItem,
     IonLabel,
+    IonItemDivider,
   ],
   template: `
     <ion-header [translucent]="true">
       <ion-toolbar>
-        <ion-title> Introducir y Guardar Texto en Archivo </ion-title>
+        <ion-title> Guardar Texto en Archivo 🖋️ </ion-title>
       </ion-toolbar>
     </ion-header>
 
     <ion-content [fullscreen]="true">
-      <form [formGroup]="form" (ngSubmit)="guardarTexto()">
-        <ion-item>
-          <ion-label position="floating">Texto</ion-label>
-          <ion-textarea formControlName="texto"></ion-textarea>
-        </ion-item>
-        <ion-button expand="full" type="submit" [disabled]="form.invalid"
-          >Guardar</ion-button
-        >
-      </form>
-      @if (mensaje) {
-      <div>{{ mensaje }}</div>
-      }
+      <main class="grid place-content-center m-4 space-y-4">
+        <ion-item-divider>
+          <h1 class="text-xl font-bold text-center">
+            Introduce el texto a guardar en el archivo 📝
+          </h1>
+        </ion-item-divider>
+
+        <form [formGroup]="form" (ngSubmit)="guardarTexto()">
+          <ion-item>
+            <ion-label position="floating">Texto</ion-label>
+            <ion-textarea formControlName="texto"></ion-textarea>
+          </ion-item>
+          <ion-button expand="full" type="submit" [disabled]="form.invalid"
+            >Guardar</ion-button
+          >
+        </form>
+        @if (mensaje) {
+        <span class="text-center">{{ mensaje }}</span>
+        }
+      </main>
     </ion-content>
   `,
 })
@@ -62,7 +72,7 @@ export class Tab5Page {
 
   async guardarTexto() {
     if (this.form.valid) {
-      const texto = this.form.value.texto;
+      const { texto } = this.form.value;
       try {
         await Filesystem.writeFile({
           path: 'texto_guardado.txt',
@@ -70,7 +80,7 @@ export class Tab5Page {
           directory: Directory.Documents,
           encoding: Encoding.UTF8,
         });
-        this.mensaje = 'Texto guardado exitosamente!';
+        this.mensaje = '¡Texto guardado exitosamente en el dispositivo!\nRevise la carpeta de documentos.';
       } catch (e) {
         this.mensaje = 'Error al guardar el texto: ' + e;
       }

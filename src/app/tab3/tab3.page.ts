@@ -8,6 +8,7 @@ import {
   IonItem,
   IonLabel,
   IonButton,
+  IonItemDivider,
 } from '@ionic/angular/standalone';
 import { FormsModule } from '@angular/forms';
 
@@ -23,25 +24,31 @@ import { FormsModule } from '@angular/forms';
     IonItem,
     IonLabel,
     IonButton,
+    IonItemDivider,
     FormsModule,
   ],
   template: `
     <ion-header [translucent]="true">
       <ion-toolbar>
-        <ion-title> Calcular Diferencia de Días </ion-title>
+        <ion-title> Calcular Diferencia de Días 🗓️ </ion-title>
       </ion-toolbar>
     </ion-header>
 
     <ion-content [fullscreen]="true">
       <main class="grid place-content-center m-4 space-y-4">
-        <div class="flex flex-col items-center">
+        <ion-item-divider>
+        <h1 class="text-xl font-bold text-center">Seleccione una fecha en cada calendario 📌</h1>
+      </ion-item-divider>
+
+        <div class="flex flex-col items-center gap-2">
           <ion-label>Primera Fecha</ion-label>
           <ion-datetime
             display-format="MM/DD/YYYY"
             [(ngModel)]="primeraFecha"
           ></ion-datetime>
         </div>
-        <div class="flex flex-col items-center">
+        <hr>
+        <div class="flex flex-col items-center gap-2">
           <ion-label>Segunda Fecha</ion-label>
           <ion-datetime
             display-format="MM/DD/YYYY"
@@ -50,9 +57,7 @@ import { FormsModule } from '@angular/forms';
         </div>
 
         <div class="flex flex-col items-center gap-y-4">
-          <ion-button (click)="calcularDiferencia()"
-            >Calcular</ion-button
-          >
+          <ion-button (click)="calcularDiferencia()">Calcular</ion-button>
           @if (diferencia !== null) {
           <div>Diferencia: {{ diferencia }} días</div>
           }
@@ -69,7 +74,6 @@ export class Tab3Page {
   constructor() {}
 
   calcularDiferencia() {
-
     if (!this.primeraFecha || !this.segundaFecha) {
       return alert('Por favor, seleccione ambas fechas');
     }
