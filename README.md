@@ -12,7 +12,7 @@
 > La aplicación cuenta con las siguientes funcionalidades:
 > - La primera pestaña tiene una descripción biográfica del autor y tiene 15 componentes de Ionic diferentes.
 > - La segunda pestaña tiene mi foto y un enlace a este repositorio con el código de la aplicación.
-> - La tercera pestaña permite al usuario escoger dos fechas y calcular los días de diferencia que hay entre ellas.
+> - La tercera pestaña permite al usuario escoger dos fechas y calcular la diferencia en días.
 > - La cuarta pestaña permite calcular las raices de una ecuación cuadrática.
 > - La quinta pestaña permite introducir texto y guardarlo localmente en un archivo.
 
