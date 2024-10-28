@@ -4,8 +4,6 @@
   <img height="35px" src="https://cdn.iconscout.com/icon/free/png-256/free-ionic-logo-icon-download-in-svg-png-gif-file-formats--technology-social-media-company-vol-1-pack-logos-icons-3029993.png" alt="Logo">
 </h1>
 
----
-
 > [!IMPORTANT]
 > **Aplicación Móvil Disponible para Android**
 >
@@ -18,7 +16,7 @@
 
 ---
 
-### Vista Previa de la App 📲🤳
+### 📲💻 Vista Previa de la App
 
 <details>
   <summary>♾️ Primera Pestaña</summary>
