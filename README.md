@@ -57,7 +57,7 @@
 <h3 id="deploy">▶️ Descargar la App </h3>
 
   </div>
-   <a href="android\app\build\outputs\apk\debug\app-debug.apk">
+   <a href="https://github.com/JohnMata0427/prueba-bimestral-01/releases/tag/Release-v1">
      <img src="https://img.shields.io/badge/Descargar%20para%20Android-75BC54.svg?logo=android&logoColor=white">
    </a>
   <div align="center">
