@@ -42,7 +42,7 @@
 <details>
   <summary>♾️ Cuarta Pestaña</summary>
 
-  ![image](https://github.com/user-attachments/assets/283122b2-40be-4f16-9f94-c7471ed78ec9)
+  ![image](https://github.com/user-attachments/assets/c1a8f197-9358-45b9-84ea-7edb00e61899)
   
 </details>
 <details>
