@@ -18,29 +18,48 @@
 
 ### 📲💻 Vista Previa de la App
 
+![image](https://github.com/user-attachments/assets/980b5598-1e52-4610-8147-f2801e47f2db)
+
+
 <details>
   <summary>♾️ Primera Pestaña</summary>
-  <img src="">
+
+  ![image](https://github.com/user-attachments/assets/709f16e9-8134-4c70-95fc-2e8ec71a0d52)
+  
 </details>
 <details>
   <summary>♾️ Segunda Pestaña</summary>
-  <img src="">
+
+  ![image](https://github.com/user-attachments/assets/050e533b-b68f-43f2-b2fa-39587ce5a61c)
+
 </details>
 <details>
   <summary>♾️ Tercera Pestaña</summary>
-  <img src="">
+
+  ![image](https://github.com/user-attachments/assets/eabfb5b2-e400-4b98-9fa1-008594c7e87a)
+  
 </details>
 <details>
   <summary>♾️ Cuarta Pestaña</summary>
-  <img src="">
+
+  ![image](https://github.com/user-attachments/assets/283122b2-40be-4f16-9f94-c7471ed78ec9)
+  
 </details>
 <details>
   <summary>♾️ Quinta Pestaña</summary>
-  <img src="">
+
+  ![Uploading image.png…]()
+
 </details>
 
 ---
 
 <h3 id="deploy">▶️ Descargar la App </h3>
+
+  </div>
+   <a href="android\app\build\outputs\apk\debug\app-debug.apk">
+     <img src="https://img.shields.io/badge/Descargar%20para%20Android-75BC54.svg?logo=android&logoColor=white">
+   </a>
+  <div align="center">
 
 ---
