@@ -48,7 +48,7 @@
 <details>
   <summary>♾️ Quinta Pestaña</summary>
 
-  ![Uploading image.png…]()
+  ![image](https://github.com/user-attachments/assets/72a0c569-8724-4258-adc3-669612870cf8)
 
 </details>
 
