@@ -12,5 +12,9 @@ import { IonApp, IonRouterOutlet } from '@ionic/angular/standalone';
   `,
 })
 export class AppComponent {
+  private theme = window.matchMedia('(prefers-color-scheme: dark)').matches
   constructor() {}
+  ngOnInit() {
+    console.log('Theme:', this.theme ? 'dark' : 'light')
+  }
 }

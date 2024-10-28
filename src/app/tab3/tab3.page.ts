@@ -74,10 +74,6 @@ export class Tab3Page {
   constructor() {}
 
   calcularDiferencia() {
-    if (!this.primeraFecha || !this.segundaFecha) {
-      return alert('Por favor, seleccione ambas fechas');
-    }
-
     if (this.primeraFecha && this.segundaFecha) {
       const inicio = new Date(this.primeraFecha);
       const final = new Date(this.segundaFecha);

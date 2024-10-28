@@ -10,9 +10,12 @@ import {
   IonButton,
   IonItem,
   IonLabel,
-  IonItemDivider
+  IonItemDivider,
+  IonToast,
 } from '@ionic/angular/standalone';
 import { ReactiveFormsModule } from '@angular/forms';
+import { checkbox } from 'ionicons/icons';
+import { addIcons } from 'ionicons';
 
 @Component({
   selector: 'app-tab5',
@@ -27,6 +30,7 @@ import { ReactiveFormsModule } from '@angular/forms';
     ReactiveFormsModule,
     IonItem,
     IonLabel,
+    IonToast,
     IonItemDivider,
   ],
   template: `
@@ -52,19 +56,26 @@ import { ReactiveFormsModule } from '@angular/forms';
           <ion-button expand="full" type="submit" [disabled]="form.invalid"
             >Guardar</ion-button
           >
+          <ion-toast
+            [isOpen]="!!mensaje"
+            [message]="mensaje"
+            duration="3000"
+            icon="checkbox"
+            color="success"
+            animated
+            translucent
+          ></ion-toast>
         </form>
-        @if (mensaje) {
-        <span class="text-center">{{ mensaje }}</span>
-        }
       </main>
     </ion-content>
   `,
 })
 export class Tab5Page {
   form: FormGroup;
-  mensaje: string | null = null;
+  mensaje!: string;
 
   constructor(private fb: FormBuilder) {
+    addIcons({ checkbox });
     this.form = this.fb.group({
       texto: ['', Validators.required],
     });
@@ -80,9 +91,15 @@ export class Tab5Page {
           directory: Directory.Documents,
           encoding: Encoding.UTF8,
         });
-        this.mensaje = '¡Texto guardado exitosamente en el dispositivo!\nRevise la carpeta de documentos.';
+        this.mensaje =
+          '¡Texto guardado exitosamente en el dispositivo! Revise la carpeta de documentos.';
+        this.form.reset();
       } catch (e) {
         this.mensaje = 'Error al guardar el texto: ' + e;
+      } finally {
+        setTimeout(() => {
+          this.mensaje = '';
+        }, 3000);
       }
     }
   }

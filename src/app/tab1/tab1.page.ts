@@ -20,6 +20,9 @@ import {
   IonAccordion,
   IonAccordionGroup,
   IonBadge,
+  IonSearchbar,
+  IonRefresher,
+  IonRefresherContent,
 } from '@ionic/angular/standalone';
 import { addIcons } from 'ionicons';
 import { heart } from 'ionicons/icons';
@@ -48,6 +51,9 @@ import { heart } from 'ionicons/icons';
     IonAccordion,
     IonAccordionGroup,
     IonBadge,
+    IonSearchbar,
+    IonRefresher,
+    IonRefresherContent,
   ],
   template: `
     <ion-header [translucent]="true">
@@ -62,6 +68,9 @@ import { heart } from 'ionicons/icons';
     </ion-header>
 
     <ion-content [fullscreen]="true">
+      <ion-refresher slot="fixed" (ionRefresh)="handleRefresh($event)">
+        <ion-refresher-content></ion-refresher-content>
+      </ion-refresher>
       <main class="flex flex-col m-4 gap-y-4">
         <ion-item-divider>
           <h1 class="text-xl font-bold mx-auto">Autor: Jhon Mata 👨‍🎓</h1>
@@ -125,7 +134,7 @@ import { heart } from 'ionicons/icons';
             </div>
           </ion-card-content>
         </ion-card>
-        
+
         <ion-button id="present-alert" class="mx-auto" color="light"
           >Presiona para ver un mensaje</ion-button
         >
@@ -142,19 +151,95 @@ import { heart } from 'ionicons/icons';
         ></ion-img>
 
         <h1 class="text-3xl text-center font-bold">🪐 Habilidades:</h1>
-        <ion-list>
+        <ion-list class="border-4 border-neutral-700 rounded-lg">
           <ion-item>
             <ion-label>Frontend</ion-label>
-            <ion-badge color="primary">5 tecnologías</ion-badge>
+            <ion-badge color="primary">10 tecnologías</ion-badge>
           </ion-item>
+            <div class="flex flex-wrap gap-2 ion-padding">
+              <img src="https://skillicons.dev/icons?i=html" alt="HTML" />
+              <img src="https://skillicons.dev/icons?i=css" alt="CSS" />
+              <img
+                src="https://skillicons.dev/icons?i=bootstrap"
+                alt="Bootstrap"
+              />
+              <img src="https://skillicons.dev/icons?i=astro" alt="Astro" />
+              <img src="https://skillicons.dev/icons?i=vite" alt="Vite" />
+              <img src="https://skillicons.dev/icons?i=vue" alt="Vue.js" />
+              <img
+                src="https://skillicons.dev/icons?i=tailwindcss"
+                alt="Tailwind CSS"
+              />
+              <img src="https://skillicons.dev/icons?i=react" alt="React" />
+              <img src="https://skillicons.dev/icons?i=nextjs" alt="Next.js" />
+              <img src="https://skillicons.dev/icons?i=angular" alt="Angular" />
+            </div>
           <ion-item>
             <ion-label>Backend</ion-label>
-            <ion-badge color="secondary">7 tecnologías</ion-badge>
+            <ion-badge color="secondary">12 tecnologías</ion-badge>
           </ion-item>
+            <div class="flex flex-wrap gap-2 ion-padding">
+              <img
+                src="https://skillicons.dev/icons?i=javascript"
+                alt="JavaScript"
+              />
+              <img
+                src="https://skillicons.dev/icons?i=typescript"
+                alt="TypeScript"
+              />
+              <img src="https://skillicons.dev/icons?i=cpp" alt="C++" />
+              <img src="https://skillicons.dev/icons?i=c" alt="C" />
+              <img src="https://skillicons.dev/icons?i=cs" alt="C#" />
+              <img src="https://skillicons.dev/icons?i=dotnet" alt=".NET" />
+              <img src="https://skillicons.dev/icons?i=php" alt="PHP" />
+              <img src="https://skillicons.dev/icons?i=python" alt="Python" />
+              <img src="https://skillicons.dev/icons?i=java" alt="Java" />
+              <img src="https://skillicons.dev/icons?i=spring" alt="Spring" />
+              <img src="https://skillicons.dev/icons?i=nodejs" alt="Node.js" />
+              <img src="https://skillicons.dev/icons?i=prisma" alt="Prisma" />
+            </div>
           <ion-item>
             <ion-label>Movil</ion-label>
-            <ion-badge color="tertiary">3 tecnologías</ion-badge>
+            <ion-badge color="tertiary">4 tecnologías</ion-badge>
           </ion-item>
+            <div class="flex flex-wrap gap-2 ion-padding">
+              <img src="https://skillicons.dev/icons?i=dart" alt="Dart" />
+              <img src="https://skillicons.dev/icons?i=flutter" alt="Flutter" />
+              <img src="https://skillicons.dev/icons?i=kotlin" alt="Kotlin" />
+              <img
+                class="size-12"
+                src="https://raw.githubusercontent.com/tandpfun/skill-icons/d8c66b32f136993c066465a373f52c2c3480f112/icons/Ionic-Dark.svg"
+                alt="Ionic"
+              />
+            </div>
+          <ion-item>
+            <ion-label>Herramientas de trabajo</ion-label>
+            <ion-badge color="light">9 herramientas</ion-badge>
+          </ion-item>
+          <div class="flex flex-wrap gap-2 ion-padding">
+            <img src="https://skillicons.dev/icons?i=git" alt="Git" />
+            <img src="https://skillicons.dev/icons?i=postman" alt="Postman" />
+            <img src="https://skillicons.dev/icons?i=arduino" alt="Arduino" />
+            <img
+              src="https://skillicons.dev/icons?i=powershell"
+              alt="PowerShell"
+            />
+            <img src="https://skillicons.dev/icons?i=replit" alt="Replit" />
+            <img src="https://skillicons.dev/icons?i=figma" alt="Figma" />
+            <img src="https://skillicons.dev/icons?i=pnpm" alt="pnpm" />
+            <img
+              src="https://skillicons.dev/icons?i=vscode"
+              alt="Visual Studio Code"
+            />
+            <img
+              src="https://skillicons.dev/icons?i=visualstudio"
+              alt="Visual Studio"
+            />
+            <img
+              src="https://skillicons.dev/icons?i=idea"
+              alt="IntelliJ IDEA"
+            />
+          </div>
         </ion-list>
 
         <h1 class="text-3xl text-center font-bold">🌌 Estadísticas:</h1>
@@ -184,5 +269,12 @@ export class Tab1Page {
 
   cambiarColor() {
     this.color === 'dark' ? (this.color = 'danger') : (this.color = 'dark');
+  }
+
+  handleRefresh(event: any) {
+    setTimeout(() => {
+      event.target.complete();
+      window.location.reload();
+    }, 2000);
   }
 }

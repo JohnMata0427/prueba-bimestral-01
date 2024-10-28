@@ -28,7 +28,7 @@ import {
           src="https://github.com/JohnMata0427.png"
           alt="Mi foto de perfil"
         />
-        <h1 class="text-2xl text-center font-bold">
+        <h1 class="text-xl text-center font-bold">
           Enlace al Repositorio de la App
         </h1>
         <a
