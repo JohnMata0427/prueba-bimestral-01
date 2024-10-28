@@ -44,7 +44,7 @@ import { ReactiveFormsModule } from '@angular/forms';
         </ion-item-divider>
 
         <span class="text-center text-sm">
-          Forma de la Ecuación Cuadrática ax²+bx+c = 0
+          Forma de la Ecuación Cuadrática ax² + bx + c = 0
         </span>
 
         <form

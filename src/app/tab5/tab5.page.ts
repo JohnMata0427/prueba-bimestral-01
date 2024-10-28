@@ -36,7 +36,7 @@ import { addIcons } from 'ionicons';
   template: `
     <ion-header [translucent]="true">
       <ion-toolbar>
-        <ion-title> Guardar Texto en Archivo 🖋️ </ion-title>
+        <ion-title> Guardar Texto en un Archivo 🖋️ </ion-title>
       </ion-toolbar>
     </ion-header>
 
@@ -44,7 +44,7 @@ import { addIcons } from 'ionicons';
       <main class="grid place-content-center m-4 space-y-4">
         <ion-item-divider>
           <h1 class="text-xl font-bold text-center">
-            Introduce el texto a guardar en el archivo 📝
+            Introduzca el texto a guardar 📝
           </h1>
         </ion-item-divider>
 

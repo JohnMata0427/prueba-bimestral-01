@@ -214,7 +214,7 @@ import { heart } from 'ionicons/icons';
             </div>
           <ion-item>
             <ion-label>Herramientas de trabajo</ion-label>
-            <ion-badge color="light">9 herramientas</ion-badge>
+            <ion-badge color="light">10 herramientas</ion-badge>
           </ion-item>
           <div class="flex flex-wrap gap-2 ion-padding">
             <img src="https://skillicons.dev/icons?i=git" alt="Git" />
@@ -250,10 +250,10 @@ import { heart } from 'ionicons/icons';
               <ion-label>Mís estadísticas de GitHub</ion-label>
             </ion-item>
             <div class="ion-padding" slot="content">
-              <ion-img
+              <img
                 src="http://github-profile-summary-cards.vercel.app/api/cards/stats?username=johnmata0427&theme=discord_old_blurple"
                 alt="Estadísticas de GitHub"
-              ></ion-img>
+              />
             </div>
           </ion-accordion>
         </ion-accordion-group>
