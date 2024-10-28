@@ -151,7 +151,7 @@ import { heart } from 'ionicons/icons';
         ></ion-img>
 
         <h1 class="text-3xl text-center font-bold">🪐 Habilidades:</h1>
-        <ion-list class="border-4 border-neutral-700 rounded-lg">
+        <ion-list class="border-4 border-neutral-300 dark:border-neutral-700 rounded-lg">
           <ion-item>
             <ion-label>Frontend</ion-label>
             <ion-badge color="primary">10 tecnologías</ion-badge>
@@ -251,6 +251,7 @@ import { heart } from 'ionicons/icons';
             </ion-item>
             <div class="ion-padding" slot="content">
               <img
+                class="mx-auto"
                 src="http://github-profile-summary-cards.vercel.app/api/cards/stats?username=johnmata0427&theme=discord_old_blurple"
                 alt="Estadísticas de GitHub"
               />
